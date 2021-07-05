@@ -1,0 +1,107 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+}
+
+h1{
+    color: #464646;
+}
+
+header{
+    background-color: #7e9ec9;
+    box-sizing: border-box;
+    padding: 0px 100px;
+}
+
+header img {
+    max-width: 140px;
+}
+
+main {
+    width: 70%;
+    margin: 0 auto;
+    padding: 40px 10px 60px 10px;
+    text-align: center;
+}
+
+footer {
+    background-color: #363636;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+footer, p{
+    color: #8a8a8a;
+    font-size: 0.95em;
+}
+
+form {    
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 1.2em;
+    margin-bottom: 7px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    color: rgb(85, 85, 85);
+}
+
+textarea:focus, input:focus {
+    outline: none;
+    box-shadow: 0 0 3pt 2pt #cfcfcf;
+    border-radius: 8px;
+  }
+
+button {
+    padding: 13px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button, .primary {
+    background-color: #3786cf;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+button, .primary:hover{
+    background-color: #236fb6;
+}
+
+button, .sucsses {
+    background-color: #3786cf;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+button, .sucsses:hover{
+    background-color: #236fb6;
+}
+
+::placeholder{
+    color: #c7c7c7;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8vh 82vh 10vh;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+* {
+    font-family: 'Montserrat', monospace;
+}
