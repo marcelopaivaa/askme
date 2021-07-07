@@ -2,10 +2,10 @@
     <main>
         <div class="page-title">
             <h1>Ask - Plataforma de Perguntas e Respostas</h1>
-            <a href="new-ask"><button class="success">Perguntar</button></a>       
+            <a href="/"><button class="success">Voltar</button></a>  
         </div>
-       <div class="questions-container">
-           <form method="post" action="question-list">
+        <div class="questions-container"> 
+            <form method="post" action="question-list">
                 <select name="category" required>
                     <option value="">-- Selecione uma categoria --</option>
                     <option value="javascript">Javascript</option>
@@ -17,14 +17,14 @@
                 </select>
                 <button class="primary">Filtrar categoria</button>
            </form>
-           <h2>>> Todas as perguntas:</h2>
-           <% questions.forEach(question => { %>
-            <div class="question-list">
-                <h4><%= question.title %></h4>
-                <button class="light">Responder / Ver</button>
-            </div>
-           <% }) %>
-       </div>
+           <h2>>> Últimas perguntas sobre <%= question.reduce(category => category.category) %></h2>
+            <% question.forEach(question => { %>
+             <div class="question-list">
+                 <h4><%= question.title %></h4>
+                 <button class="light">Responder / Ver</button>
+             </div>
+            <% }) %>
+        </div>
     </main>
 <%- include ('partials/footer') %>
     

@@ -3,7 +3,11 @@ const Sequelize = require('sequelize')
 // Connection Object
 const connection = new Sequelize('global_db', 'root', '123456', {
     host: 'localhost',
-    dialect: 'mysql'
+    dialect: 'mysql',
+    define:{
+        freezeTableName: true,
+        timestamps: true
+    }
 })
 
 // Test Connection

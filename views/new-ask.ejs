@@ -1,0 +1,23 @@
+<%- include ('partials/header') %>
+    <main>
+        <div class="page-title">
+            <h1>Qual sua dúvida ?</h1>
+            <a href="/"><button class="success">Voltar</button></a> 
+        </div>
+        <form method="post" action="save-question">
+            <input type="text" name="title" placeholder="Pergunta resumida" required>
+            <textarea name="description" cols="30" rows="5" placeholder="Detalhes da pergunta" required></textarea>
+            <select name="category" required>
+                <option value="">-- Selecione uma categoria --</option>
+                <option value="javascript">Javascript</option>
+                <option value="nodeJS">nodeJS</option>
+                <option value="php">PHP</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="other">Outro</option>
+            </select>
+            <button class="primary">Enviar pergunta</button>
+        </form>
+    </main>
+<%- include ('partials/footer') %>
+    
