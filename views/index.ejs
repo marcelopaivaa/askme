@@ -21,7 +21,7 @@
            <% questions.forEach(question => { %>
             <div class="question-list">
                 <h4><%= question.title %></h4>
-                <button class="light">Responder / Ver</button>
+                <a href="/question/<%= question.id %>"><button class="light">Responder / Ver</button></a>
             </div>
            <% }) %>
        </div>
