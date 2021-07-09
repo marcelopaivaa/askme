@@ -49,7 +49,6 @@ app.post("/question-list", (req, res) => {
     Question.findAll({raw: true, order:[['id', 'desc']],
         where: {category: category}
     }).then(question => {
-        console.log(question.reduce(category => category.category))
         res.render('question-list', {
             question: question
         })
@@ -57,17 +56,35 @@ app.post("/question-list", (req, res) => {
 })
 
 app.get("/question/:id", (req, res) => {
-    let id = req.params.id
-    console.log(id)
+    let id = req.params.id                                                         
 
     Question.findOne({where: {id: id}}).then(question => {
         if(question != undefined){
-            res.render("question", {
-                question: question
+            Answer.findAll({order:[['id', 'desc']],
+                where: {questionId: question.id}
+            }).then(answer => {
+                res.render("question", {
+                    question: question,
+                    answer: answer
+                })
             })
+
         }else{
             res.redirect("/", /*testar função para carregar aviso*/)
         }
+    })
+})
+
+app.post("/answer", (req, res) => {
+    let body = req.body.body
+    let questionId = req.body.questionId
+    console.log(questionId)
+
+    Answer.create({
+        body: body,
+        questionId: questionId
+    }).then(() => {
+        res.redirect("/question/" + questionId)
     })
 })
 

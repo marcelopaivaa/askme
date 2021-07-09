@@ -4,19 +4,18 @@
             <h1>Ask - Plataforma de Perguntas e Respostas</h1>
             <a href="new-ask"><button class="success">Perguntar</button></a>       
         </div>
+        <hr><br>
        <div class="questions-container">
            <form method="post" action="question-list">
                 <select name="category" required>
                     <option value="">-- Selecione uma categoria --</option>
-                    <option value="javascript">Javascript</option>
-                    <option value="nodeJS">nodeJS</option>
-                    <option value="php">PHP</option>
-                    <option value="html">HTML</option>
-                    <option value="css">CSS</option>
-                    <option value="other">Outro</option>
+                    <% questions.forEach(question => { %>
+                        <option value="<%= question.category %>"><%= question.category %></option>
+                    <% }) %>
                 </select>
                 <button class="primary">Filtrar categoria</button>
            </form>
+           <br><br><hr>
            <h2>>> Todas as perguntas:</h2>
            <% questions.forEach(question => { %>
             <div class="question-list">

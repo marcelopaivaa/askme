@@ -4,24 +4,13 @@
             <h1>Ask - Plataforma de Perguntas e Respostas</h1>
             <a href="/"><button class="success">Voltar</button></a>  
         </div>
+        <hr><br>
         <div class="questions-container"> 
-            <form method="post" action="question-list">
-                <select name="category" required>
-                    <option value="">-- Selecione uma categoria --</option>
-                    <option value="javascript">Javascript</option>
-                    <option value="nodeJS">nodeJS</option>
-                    <option value="php">PHP</option>
-                    <option value="html">HTML</option>
-                    <option value="css">CSS</option>
-                    <option value="other">Outro</option>
-                </select>
-                <button class="primary">Filtrar categoria</button>
-           </form>
-           <h2>>> Últimas perguntas sobre <%= question.reduce(category => category.category) %></h2>
+           <h2>>> Últimas perguntas sobre <span><%= question.reduce(category => category.category) %></span></h2>
             <% question.forEach(question => { %>
              <div class="question-list">
                  <h4><%= question.title %></h4>
-                 <button class="light">Responder / Ver</button>
+                 <a href="/question/<%= question.id %>"><button class="light">Responder / Ver</button></a>
              </div>
             <% }) %>
         </div>

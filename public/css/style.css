@@ -18,6 +18,14 @@ h1{
     color: #464646;
 }
 
+h2{
+    color: #a7a7a7;
+}
+
+span{
+    color: #0d5497;
+}
+
 header{
     background-color: #7e9ec9;
     box-sizing: border-box;
@@ -29,6 +37,7 @@ header img {
 }
 
 main {
+    min-height: 60vh;
     width: 70%;
     margin: 0 auto;
     padding: 40px 10px 60px 10px;
@@ -62,6 +71,15 @@ input, textarea, select {
     color: rgb(85, 85, 85);
 }
 
+select {
+    padding: 7px;
+    font-size: 0.9em;
+    margin-bottom: 7px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    color: rgb(85, 85, 85);
+}
+
 textarea:focus, input:focus, select:focus {
     outline: none;
     box-shadow: 0 0 3pt 2pt #cfcfcf;
@@ -75,6 +93,8 @@ button {
 }
 
 button, .primary {
+    padding: 8px;
+    font-size: 1em;
     background-color: #3786cf;
     color: #fff;
     border: none;
@@ -133,8 +153,12 @@ button, .primary:hover{
     align-items: center;
 }
 
-.questions-container{
-
+.answers{
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    border-radius: 7px;
+    border: solid 1px #dddbdb;
 }
 
 .question-list{

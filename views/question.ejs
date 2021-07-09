@@ -1,11 +1,27 @@
 <%- include ('partials/header') %>
     <main>
         <div class="page-title">
-            <h1>Ask - Página da Pergunta</h1>
+            <h1><%= question.title %></h1>
             <a href="/"><button class="success">Voltar</button></a>       
         </div>
-        <h2><%= question.title %></h2>
-        <h4><%= question.description %></h4>
+        <div class="questions-container">
+            <h3>Descrição:</h3>
+            <p><%= question.description %></p>
+            <hr>
+            <form method="POST" action="/answer">
+                <h4>Responder:</h4>
+                <input type="hidden" name="questionId" value="<%= question.id %>">
+                <textarea name="body" cols="" rows="4" placeholder="Digite aqui sua resposta ..." required></textarea>
+                <button type="submit" class="primary">Enviar resposta</button></a>
+            </form>
+            <br><br><hr>
+            <h2>Todas as respostas:</h2>
+            <% answer.forEach(answer => { %>
+                <div class="answers">
+                     <h5>- <%= answer.body %></h5>
+                </div>
+            <% }) %>
+        </div>
     </main>
 <%- include ('partials/footer') %>
     
