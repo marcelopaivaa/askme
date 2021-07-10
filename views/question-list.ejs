@@ -6,10 +6,10 @@
         </div>
         <hr><br>
         <div class="questions-container"> 
-           <h2>>> Últimas perguntas sobre <span><%= question.reduce(category => category.category) %></span></h2>
+           <h2>>> Últimas perguntas sobre <span><%= question[0].category %></span></h2>
             <% question.forEach(question => { %>
              <div class="question-list">
-                 <h4><%= question.title %></h4>
+                 <h4><i class="far fa-hand-point-right"></i> &nbsp; <%= question.title %></h4>
                  <a href="/question/<%= question.id %>"><button class="light">Responder / Ver</button></a>
              </div>
             <% }) %>

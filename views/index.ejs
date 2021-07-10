@@ -2,7 +2,7 @@
     <main>
         <div class="page-title">
             <h1>Ask - Plataforma de Perguntas e Respostas</h1>
-            <a href="new-ask"><button class="success">Perguntar</button></a>       
+            <a href="new-ask"><button class="success"><i class="fas fa-question-circle"></i> &nbsp; Perguntar</button></a>       
         </div>
         <hr><br>
        <div class="questions-container">
@@ -13,17 +13,29 @@
                         <option value="<%= question.category %>"><%= question.category %></option>
                     <% }) %>
                 </select>
-                <button class="primary">Filtrar categoria</button>
+                <button class="primary"><i class="fas fa-filter"></i> &nbsp; Filtrar categoria</button>
            </form>
            <br><br><hr>
            <h2>>> Todas as perguntas:</h2>
            <% questions.forEach(question => { %>
             <div class="question-list">
-                <h4><%= question.title %></h4>
-                <a href="/question/<%= question.id %>"><button class="light">Responder / Ver</button></a>
+                <h4><i class="far fa-hand-point-right"></i> &nbsp; <%= question.title %></h4>
+                <a href="/question/<%= question.id %>"><button class="light"><i class="far fa-eye"></i></i>&nbsp; Responder / Ver</button></a>
             </div>
            <% }) %>
        </div>
     </main>
+
+    <!-- Alert functions -->
+    <script>
+        const alert = function questionSaved(){
+            swal("Ok Ask !", "Sua pergunta foi adicionada !", "success");
+        }
+
+        const urlParams = new URLSearchParams(window.location.search)
+        const param = urlParams.get("alert")
+
+        param === "question-saved" ? window.onload = alert : false
+    </script>
 <%- include ('partials/footer') %>
     

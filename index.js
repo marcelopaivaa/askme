@@ -39,7 +39,7 @@ app.post("/save-question", (req, res) => {
         description: description,
         category: category
     }).then(() => {
-        res.redirect("/")
+        res.redirect("/?alert='question-saved")
     })
 })
 

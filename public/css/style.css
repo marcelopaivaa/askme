@@ -44,7 +44,7 @@ main {
 }
 
 footer {
-    background-color: #363636;
+    background-color: #2e2e2e;
     text-align: center;
     padding: 10px 0px;
     margin-top: 45px;
@@ -122,7 +122,7 @@ button, .primary:hover{
 
 .light {
     background-color: rgba(0, 0, 0, 0);
-    border: 1px solid #9c9c9c;
+    border: 1px solid #c5c5c5;
     color: #6b6b6b;
     border-radius: 8px;
     padding: 0px 25px;
@@ -133,8 +133,8 @@ button, .primary:hover{
 }
 
 .light:hover{
-    background-color: #f0f0f0;
-    border: 1px solid #f0f0f0;
+    background-color: #ececec;
+    border: 1px solid #dbdbdb;
 }
 
 ::placeholder{
@@ -162,7 +162,8 @@ button, .primary:hover{
 }
 
 .question-list{
-    background-color: #dfdfdf;
+    background-color: #e9e9e9;
+    border: 1px solid #dddddd;
     padding: 1px 20px;
     margin-bottom: 5px;
     display: flex;
@@ -172,5 +173,5 @@ button, .primary:hover{
 }
 
 .question-list:hover{
-    background-color: #fff;
+    background-color: #f3f3f3;
 }

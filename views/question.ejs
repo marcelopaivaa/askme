@@ -2,9 +2,10 @@
     <main>
         <div class="page-title">
             <h1><%= question.title %></h1>
-            <a href="/"><button class="success">Voltar</button></a>       
+            <a href="/"><button class="success"><i class="fas fa-undo"></i>&nbsp; Voltar</button></a>       
         </div>
         <div class="questions-container">
+            <h5>Categoria: <%= question.category %></h5>
             <h3>Descrição:</h3>
             <p><%= question.description %></p>
             <hr>
@@ -12,16 +13,30 @@
                 <h4>Responder:</h4>
                 <input type="hidden" name="questionId" value="<%= question.id %>">
                 <textarea name="body" cols="" rows="4" placeholder="Digite aqui sua resposta ..." required></textarea>
-                <button type="submit" class="primary">Enviar resposta</button></a>
+                <button type="submit" class="primary">Enviar resposta &nbsp;<i class="fas fa-arrow-right"></i></button></a>
             </form>
             <br><br><hr>
             <h2>Todas as respostas:</h2>
             <% answer.forEach(answer => { %>
                 <div class="answers">
-                     <h5>- <%= answer.body %></h5>
+                     <h5><i class="far fa-hand-point-right"></i> &nbsp; &nbsp; <%= answer.body %></h5>
                 </div>
             <% }) %>
         </div>
     </main>
+
+    <!-- Alert functions -->
+    <script>
+        const alert = function answerSaved(){
+            swal("Obrigado por responder !", "Sua resposta foi adicionada !", "success");
+        }
+
+        const urlParams = new URLSearchParams(window.location.search)
+        const param = urlParams.get("alert")
+
+        console.log(param)
+
+        param === "answer-saved" ? window.onload = alert : false
+    </script>
 <%- include ('partials/footer') %>
     

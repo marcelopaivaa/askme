@@ -2,7 +2,7 @@
     <main>
         <div class="page-title">
             <h1>Qual sua dúvida ?</h1>
-            <a href="/"><button class="success">Voltar</button></a> 
+            <a href="/"><button class="success"><i class="fas fa-undo"></i>&nbsp; Voltar</button></a> 
         </div>
         <form method="post" action="save-question">
             <input type="text" name="title" placeholder="Pergunta resumida" required>
@@ -16,7 +16,7 @@
                 <option value="css">CSS</option>
                 <option value="other">Outro</option>
             </select>
-            <button class="primary">Enviar pergunta</button>
+            <button class="primary">Enviar pergunta &nbsp;<i class="fas fa-arrow-right"></i></button>
         </form>
     </main>
 <%- include ('partials/footer') %>
