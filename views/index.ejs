@@ -9,9 +9,12 @@
            <form method="post" action="question-list">
                 <select name="category" required>
                     <option value="">-- Selecione uma categoria --</option>
-                    <% questions.forEach(question => { %>
-                        <option value="<%= question.category %>"><%= question.category %></option>
-                    <% }) %>
+                    <option value="javascript">Javascript</option>
+                    <option value="nodeJS">nodeJS</option>
+                    <option value="php">PHP</option>
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="other">Outro</option>
                 </select>
                 <button class="primary"><i class="fas fa-filter"></i> &nbsp; Filtrar categoria</button>
            </form>
@@ -25,17 +28,40 @@
            <% }) %>
        </div>
     </main>
-
-    <!-- Alert functions -->
     <script>
-        const alert = function questionSaved(){
-            swal("Ok Ask !", "Sua pergunta foi adicionada !", "success");
+        const questionSave = () => {
+            swal({
+                icon: "success",
+                title: "Sucesso !",
+                text: "Sua pergunta foi adicionada !",
+                buttons: {
+                    confirm: "Fechar"
+                }
+            })
+        }
+
+        const categoryUndefined = () => {
+            swal({
+                icon: "warning",
+                title: "Essa categoria ainda não possui perguntas",
+                text: "Faça a primeira pergunta ...",
+                buttons: {
+                    cancel: "Fechar",
+                    ask: "Perguntar"
+                }
+            }).then(function(value) {
+                if(value == "ask"){
+                    window.location = "new-ask";
+                }
+            })
         }
 
         const urlParams = new URLSearchParams(window.location.search)
         const param = urlParams.get("alert")
 
-        param === "question-saved" ? window.onload = alert : false
+        param === "question-saved" ? window.onload = questionSave : false
+        param === "category-undefined" ? window.onload = categoryUndefined : false
+
     </script>
 <%- include ('partials/footer') %>
     

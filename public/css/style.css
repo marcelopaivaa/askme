@@ -175,3 +175,19 @@ button, .primary:hover{
 .question-list:hover{
     background-color: #f3f3f3;
 }
+
+.swal-overlay {
+    background-color: rgba(49, 66, 62, 0.705);
+  }
+
+  .swal-title{
+      font-size: 1.2rem;
+  }
+
+  .swal-button--ask, .swal-button--confirm{
+    background-color: #3786cf;
+  }
+
+  .my-btn:hover{
+    background-color: #000;
+  }

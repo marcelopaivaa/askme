@@ -39,7 +39,7 @@ app.post("/save-question", (req, res) => {
         description: description,
         category: category
     }).then(() => {
-        res.redirect("/?alert='question-saved")
+        res.redirect("/?alert=question-saved")
     })
 })
 
@@ -49,9 +49,13 @@ app.post("/question-list", (req, res) => {
     Question.findAll({raw: true, order:[['id', 'desc']],
         where: {category: category}
     }).then(question => {
-        res.render('question-list', {
-            question: question
-        })
+        if(question[0] != undefined){
+            res.render('question-list', {
+                question: question
+            })
+        }else{
+            res.redirect("/?alert=category-undefined")
+        }
     })
 })
 
@@ -78,13 +82,12 @@ app.get("/question/:id", (req, res) => {
 app.post("/answer", (req, res) => {
     let body = req.body.body
     let questionId = req.body.questionId
-    console.log(questionId)
 
     Answer.create({
         body: body,
         questionId: questionId
     }).then(() => {
-        res.redirect("/question/" + questionId)
+        res.redirect("/question/" + questionId + "?alert=answer-added")
     })
 })
 

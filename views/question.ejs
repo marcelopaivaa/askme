@@ -17,26 +17,35 @@
             </form>
             <br><br><hr>
             <h2>Todas as respostas:</h2>
-            <% answer.forEach(answer => { %>
-                <div class="answers">
-                     <h5><i class="far fa-hand-point-right"></i> &nbsp; &nbsp; <%= answer.body %></h5>
-                </div>
-            <% }) %>
+            <% if(answer[0] != undefined){ %>
+                <% answer.forEach(answer => { %>
+                    <div class="answers">
+                         <h5><i class="far fa-hand-point-right"></i> &nbsp; &nbsp; <%= answer.body %></h5>
+                    </div>
+                <% }) %>
+                <% }else{ %>
+                        <p><i class="fas fa-exclamation-circle"></i> &nbsp; Ainda não há respostas para essa pergunta, seja o(a) primeiro(a) a responder ...</p>
+                <% } %>
         </div>
     </main>
 
     <!-- Alert functions -->
     <script>
-        const alert = function answerSaved(){
-            swal("Obrigado por responder !", "Sua resposta foi adicionada !", "success");
-        }
+        const answerAdded = () => {
+    swal({
+            icon: "success",
+            title: "Sucesso !",
+            text: "Sua resposta foi adicionada !",
+            buttons: {
+                confirm: "Fechar"
+            }
+        })
+    }
 
-        const urlParams = new URLSearchParams(window.location.search)
-        const param = urlParams.get("alert")
+    const urlParams = new URLSearchParams(window.location.search)
+    const param = urlParams.get("alert")
 
-        console.log(param)
-
-        param === "answer-saved" ? window.onload = alert : false
+    param === "answer-added" ? window.onload = answerAdded : false
     </script>
 <%- include ('partials/footer') %>
     
