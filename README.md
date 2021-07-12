@@ -32,3 +32,25 @@ Add new question
 Question successfully added with SweetAlert animated
 
 ![Screenshot](public/img/03.jpg)
+
+Questions filtered by a category
+
+![Screenshot](public/img/04.jpg)
+
+Answer page for an unanswered question
+
+![Screenshot](public/img/05.jpg)
+
+Answer page for a question with list of published answers
+
+![Screenshot](public/img/06.jpg)
+
+SweetAlert notifying you that the selected category does not yet have questions posted and gives you the option to go straight to the questions page
+
+![Screenshot](public/img/07.jpg)
+
+# Author
+
+- Marcelo Paiva
+
+http://codewave.com.br
