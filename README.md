@@ -19,7 +19,7 @@ among others
 
 See the screen layouts below and their respective utilities
 
-# Layout
+# Layout and features
 
 Home page, lists existing questions, has category filter button for new question and button to answer existing question
 
