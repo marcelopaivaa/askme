@@ -19,6 +19,19 @@ among others
 
 See the screen layouts below and their respective utilities
 
+# Technologies
+
+- HTML5
+- CSS3
+- nodeJS
+- Sequeilize
+- Express
+- EJS
+- Font Awesome
+- Javascript
+- Mysql ( workbench )
+- SweetAlert
+
 # Layout and features
 
 Home page, lists existing questions, has category filter button for new question and button to answer existing question
@@ -48,19 +61,6 @@ Answer page for a question with list of published answers
 SweetAlert notifying you that the selected category does not yet have questions posted and gives you the option to go straight to the questions page
 
 ![Screenshot](public/img/07.jpg)
-
-# Technologies
-
-- HTML5
-- CSS3
-- nodeJS
-- Sequeilize
-- Express
-- EJS
-- Font Awesome
-- Javascript
-- Mysql ( workbench )
-- SweetAlert
 
 # Author
 
