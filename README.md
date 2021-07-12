@@ -49,6 +49,19 @@ SweetAlert notifying you that the selected category does not yet have questions 
 
 ![Screenshot](public/img/07.jpg)
 
+# Technologies
+
+- HTML5
+- CSS3
+- nodeJS
+- Sequeilize
+- Express
+- EJS
+- Font Awesome
+- Javascript
+- Mysql ( workbench )
+- SweetAlert
+
 # Author
 
 - Marcelo Paiva
