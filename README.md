@@ -3,7 +3,7 @@ Q &amp; A platform
 
 [![NPM](https://img.shields.io/npm/l/react)](https://github.com/marcelosurfdev/askme/blob/master/LICENSE)
 
-# About
+### About
 
 A simple question and answer platform application that was proposed in a training and improved in this version, with many new features implemented.
 
@@ -19,7 +19,7 @@ among others
 
 See the screen layouts below and their respective utilities
 
-# Technologies
+### Technologies
 
 - HTML5
 - CSS3
@@ -32,7 +32,7 @@ See the screen layouts below and their respective utilities
 - Mysql ( workbench )
 - SweetAlert
 
-# Layout and features
+### Layout and features
 
 Home page, lists existing questions, has category filter button for new question and button to answer existing question
 
@@ -62,7 +62,7 @@ SweetAlert notifying you that the selected category does not yet have questions 
 
 ![Screenshot](public/img/07.jpg)
 
-# Author
+### Author
 
 - Marcelo Paiva
 
